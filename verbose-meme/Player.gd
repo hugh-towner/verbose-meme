@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-
+var torch = preload("res://Torch.tscn")
 var movespeed = 250
 
 func _ready():
@@ -19,3 +19,12 @@ func _physics_process(delta):
 
 	motion = motion.normalized()
 	motion = move_and_slide(motion * movespeed)
+	
+	if Input.is_action_just_pressed("LMB"):
+		place_torch()
+
+func place_torch():
+	var torch_instance = torch.instance()
+	torch_instance.position = get_global_position()
+	torch_instance.rotation_degrees = rotation_degrees
+	get_tree().get_root().call_deferred("add_child",torch_instance)
