@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 
-var movespeed = 500
+var movespeed = 250
 
 func _ready():
 	pass # Replace with function body.
