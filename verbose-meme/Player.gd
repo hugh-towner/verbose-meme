@@ -1,22 +1,28 @@
 extends KinematicBody2D
 
 var torch = preload("res://Torch.tscn")
-var movespeed = 250
+var movespeed = 180
 
-func _ready():
-	pass # Replace with function body.
+onready var animationPlayer = $AnimationPlayer
+
 func _physics_process(delta):
 	var motion = Vector2()
 
 	if Input.is_action_pressed("up"):
+		animationPlayer.play("WalkUp")
 		motion.y -= 1
-	if Input.is_action_pressed("down"):
+	elif Input.is_action_pressed("down"):
+		animationPlayer.play("WalkDown")
 		motion.y += 1
-	if Input.is_action_pressed("right"):
+	elif Input.is_action_pressed("right"):
+		animationPlayer.play("WalkRight")
 		motion.x += 1
-	if Input.is_action_pressed("left"):
+	elif Input.is_action_pressed("left"):
+		animationPlayer.play("WalkLeft")
 		motion.x -= 1
-
+	else:
+		animationPlayer.play("IdleFront")
+	
 	motion = motion.normalized()
 	motion = move_and_slide(motion * movespeed)
 	
