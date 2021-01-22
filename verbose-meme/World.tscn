@@ -8,4 +8,4 @@
 [node name="Player" parent="." instance=ExtResource( 1 )]
 
 [node name="Torch" parent="." instance=ExtResource( 2 )]
-position = Vector2( 34.9623, -0.264862 )
+position = Vector2( 67.4892, -0.264862 )

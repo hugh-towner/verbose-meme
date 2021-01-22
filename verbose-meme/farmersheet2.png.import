@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/farmerfront.png-91cd8fcb1ae58d0371a9a1e4ce84676d.stex"
+path="res://.import/farmersheet2.png-118f3f4b12cc0eed08abdcabfe781b5b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://farmerfront.png"
-dest_files=[ "res://.import/farmerfront.png-91cd8fcb1ae58d0371a9a1e4ce84676d.stex" ]
+source_file="res://farmersheet2.png"
+dest_files=[ "res://.import/farmersheet2.png-118f3f4b12cc0eed08abdcabfe781b5b.stex" ]
 
 [params]
 
